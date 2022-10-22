@@ -11,7 +11,7 @@ use Vouchers\Vouchers\VoucherService;
  * Class for generating and downloading voucher pdf
  *
  * @package Vouchers\Vouchers
- * @since x.x.x
+ * @since 1.0
  */
 class VoucherPdf
 {

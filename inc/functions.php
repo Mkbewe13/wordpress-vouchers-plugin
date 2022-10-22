@@ -4,7 +4,7 @@
  * Checks if there is at least one package in cart.
  *
  * @return bool
- * @since x.x.x
+ * @since 1.0
  */
 function validateCart(): bool
 {
@@ -21,7 +21,7 @@ function validateCart(): bool
  * Checks if there is at least one package in order items.
  *
  * @return bool
- * @since x.x.x
+ * @since 1.0
  */
 function validateOrder($order_id): bool
 {
@@ -39,7 +39,7 @@ function validateOrder($order_id): bool
  * and also if there are no extras in cart, then function return true.
  *
  * @return bool
- * @since x.x.x
+ * @since 1.0
  */
 function checkIfDisplayExtrasInfo(): bool
 {
@@ -69,7 +69,7 @@ function checkIfDisplayExtrasInfo(): bool
  * Handle download pdf voucher from thank you page
  *
  * @return void
- * @since x.x.x
+ * @since 1.0
  */
 function downloadVoucherPdf(): void
 {
@@ -89,7 +89,7 @@ add_action('init', 'downloadVoucherPdf');
  * Handle download pdf voucher from PA edit order page.
  *
  * @return void
- * @since x.x.x
+ * @since 1.0
  */
 function adminDownloadVoucherPdf(): void
 {
@@ -110,7 +110,7 @@ add_action('admin_init', 'adminDownloadVoucherPdf');
  *
  * @param WP_Post $post
  * @return void
- * @since x.x.x
+ * @since 1.0
  */
 function requiredPackageInNewOrderInfoDisplay(WP_Post $post): void
 {
@@ -140,7 +140,7 @@ add_action('submitpost_box', 'requiredPackageInNewOrderInfoDisplay');
  * Add admin error notice if woocommerce is disabled and voucher plugin still is enabled.
  *
  * @return void
- * @since x.x.x
+ * @since 1.0
  */
 function addRequiredWoocommerceErrorNotice(): void
 {

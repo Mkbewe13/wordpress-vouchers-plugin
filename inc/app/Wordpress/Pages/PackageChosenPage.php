@@ -7,7 +7,7 @@ namespace Vouchers\Wordpress\Pages;
  * Class for custom "package chosen" page
  *
  * @package VouchersFSO\Wordpress\Pages
- * @since x.x.x
+ * @since 1.0
  */
 class PackageChosenPage
 {

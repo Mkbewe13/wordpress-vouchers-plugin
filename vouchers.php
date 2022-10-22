@@ -4,7 +4,7 @@
  * Description:     Woocommerce simple vouchers extension.
  * Author:          Mkbewe13
  * Text Domain:     wvp
- * Version:         0.1
+ * Version:         1.0
  */
 
 

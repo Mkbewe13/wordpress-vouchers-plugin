@@ -6,7 +6,7 @@
  * @param $data
  * @return array
  *
- * @since x.x.x
+ * @since 1.0
  */
 function alwaysSetProductsAsVirtual($data): array
 {
@@ -23,7 +23,7 @@ add_filter('product_type_options', 'alwaysSetProductsAsVirtual');
  * @param $order_button
  * @return array|mixed|string|string[]
  *
- * @since x.x.x
+ * @since 1.0
  */
 function disableOrderButtonInCheckout($order_button)
 {
@@ -45,7 +45,7 @@ add_filter('woocommerce_order_button_html', 'disableOrderButtonInCheckout', 10, 
  *
  * @return void
  *
- * @since x.x.x
+ * @since 1.0
  */
 function displayCustomNoticeInCheckoutAndCart(): void
 {
@@ -75,7 +75,7 @@ add_action('woocommerce_check_cart_items', 'displayCustomNoticeInCheckoutAndCart
 /**
  * Adds radio for gift orders and field for recipient name
  *
- * @since x.x.x
+ * @since 1.0
  */
 function addCustomFieldsInCheckout(): void
 {
@@ -106,7 +106,7 @@ add_action('woocommerce_review_order_before_submit', 'addCustomFieldsInCheckout'
  * @param $args
  * @param $value
  *
- * @since x.x.x
+ * @since 1.0
  */
 function removeCheckoutOptionalFieldsLabel($field, $key, $args, $value)
 {
@@ -123,7 +123,7 @@ add_filter('woocommerce_form_field', 'removeCheckoutOptionalFieldsLabel', 10, 4)
 /**
  * Add recipient name field in the order meta.
  *
- * @since x.x.x
+ * @since 1.0
  **/
 function saveVoucherOrderRecipientMeta($order_id): void
 {
@@ -160,7 +160,7 @@ add_filter('manage_edit-shop_order_columns', 'addAdminOrdersListCustomColumns', 
  * @param $column
  * @param $post_id
  * @return void
- * @since x.x.x
+ * @since 1.0
  */
 function loadAdminOrdersListCustomColumnValues($column, $post_id): void
 {
@@ -200,7 +200,7 @@ add_action('manage_shop_order_posts_custom_column', 'loadAdminOrdersListCustomCo
  *
  * @param $search_fields
  * @return mixed
- * @since x.x.x
+ * @since 1.0
  */
 function addOrderSearchByVoucher($search_fields)
 {
@@ -215,7 +215,7 @@ add_filter('woocommerce_shop_order_search_fields', 'addOrderSearchByVoucher');
  *
  * @param $fields
  * @return mixed
- * @since x.x.x
+ * @since 1.0
  */
 function modifyCheckoutFields($fields)
 {
@@ -246,7 +246,7 @@ add_filter('woocommerce_enable_order_notes_field', '__return_false', 9999);
  *
  * @param $order
  * @return void
- * @since x.x.x
+ * @since 1.0
  */
 function addAdminOrderValidationNotice($order_id)
 {
@@ -263,7 +263,7 @@ add_action('woocommerce_admin_order_totals_after_total', 'addAdminOrderValidatio
  *
  * @param $order_id
  * @return void
- * @since x.x.x
+ * @since 1.0
  */
 function pdfDownloadButtonOnThankYouPage($order_id)
 {
@@ -299,7 +299,7 @@ add_action('woocommerce_thankyou', 'pdfDownloadButtonOnThankYouPage');
  *
  * @param $order
  * @return void
- * @since x.x.x
+ * @since 1.0
  */
 function addCustomFieldsInOrderEditPage($order): void
 {
@@ -384,7 +384,7 @@ add_action('woocommerce_admin_order_data_after_shipping_address', 'addCustomFiel
  *
  * @param $order_id
  * @return void
- * @since x.x.x
+ * @since 1.0
  */
 function saveAdminOrderMeta($order_id)
 {
@@ -473,7 +473,7 @@ add_action('woocommerce_admin_order_data_after_billing_address', 'addVoucherOwne
  *
  * @param $order
  * @return void
- * @since x.x.x
+ * @since 1.0
  */
 function addDownloadPdfButtonInOrderEditPage($order)
 {
@@ -513,7 +513,7 @@ add_action('woocommerce_admin_order_data_after_billing_address', 'addDownloadPdf
  * @param $email_id
  * @param $order
  * @return mixed
- * @since x.x.x
+ * @since 1.0
  */
 function addAttachmentToWoocommerceEmail($attachments, $email_id, $order)
 {
@@ -551,7 +551,7 @@ add_filter('woocommerce_email_attachments', 'addAttachmentToWoocommerceEmail', 1
  *
  * @param $order_id
  * @return void
- * @since x.x.x
+ * @since 1.0
  */
 function deleteTmpVouchers($order_id)
 {

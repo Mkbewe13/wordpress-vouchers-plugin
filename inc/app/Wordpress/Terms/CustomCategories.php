@@ -6,7 +6,7 @@ namespace Vouchers\Wordpress\Terms;
  * Class for custom categories of voucher products
  *
  * @package Vouchers\Wordpress\Terms
- * @since x.x.x
+ * @since 1.0
  */
 class CustomCategories
 {

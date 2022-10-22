@@ -10,7 +10,7 @@ use WC_Order;
  * Class for functions related with Vouchers.
  *
  * @package Vouchers\Vouchers
- * @since x.x.x
+ * @since 1.0
  */
 class VoucherService
 {
