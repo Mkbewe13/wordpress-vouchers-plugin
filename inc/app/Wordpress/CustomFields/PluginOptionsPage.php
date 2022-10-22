@@ -6,6 +6,10 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field\Field;
 use Vouchers\Wordpress\Pages\PackageChosenPage;
 
+
+/**
+ * @since 1.0
+ */
 class PluginOptionsPage
 {
 
@@ -19,7 +23,7 @@ class PluginOptionsPage
 			->add_fields(array(
 				Field::make('number', 'm13_voucher_validity', 'Ważność vouchera')->set_width(1)->set_help_text(
 					'Liczba dni'
-				)->set_default_value( 365 ),
+				)->set_default_value(365),
 				Field::make('textarea', 'm13_voucher_description', 'Opis')
 					->set_help_text(
 						'Umieszczany na voucherze.'
@@ -61,9 +65,8 @@ class PluginOptionsPage
 			$pages_options[$page->ID] = $page->post_title;
 		}
 
-		return 	$pages_options;
+		return $pages_options;
 	}
-
 
 
 	/**
