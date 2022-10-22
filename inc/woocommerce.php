@@ -87,7 +87,7 @@ function addCustomFieldsInCheckout(): void
 	), WC()->checkout->get_value('is_gift'));
 
 
-	//@TODO tutaj trzeba chowac/pokazywac zależenie od powyższego radio
+	//@TODO hide form field below, by radio value above
 	woocommerce_form_field('recipient_name', array(
 		'type' => 'text',
 		'required' => false,

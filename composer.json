@@ -1,7 +1,7 @@
 {
   "name": "mkbewe13/vouchers",
   "type": "wordpress-plugin",
-  "version": "0.1.0",
+  "version": "1.0",
   "require": {
     "htmlburger/carbon-fields": "^3.3",
     "htmlburger/carbon-field-number": "^3.0",
