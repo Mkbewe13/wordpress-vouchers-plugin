@@ -12,7 +12,7 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
-const M13_APP_NAMESPACE = '\wordpress-vouchers-plugin';
+const M13_APP_NAMESPACE = '\Vouchers';
 define('M13_APP_DIR', dirname(__FILE__));
 
 require_once 'vendor/autoload.php';
@@ -79,12 +79,17 @@ class Vouchers
 
 	public function registerClassesWithCarbonFields(): void
 	{
+		$option_page = new \Vouchers\Wordpress\CustomFields\PluginOptionsPage();
+		$option_page->register();
 
+		$custom_categories = new \Vouchers\Wordpress\Terms\CustomCategories();
+		$custom_categories->register();
 	}
 
 	public function registerClassesWithWoocommerce(): void
 	{
-
+		$voucher_service = new \Vouchers\Vouchers\VoucherService();
+		$voucher_service->register();
 	}
 
 
@@ -95,6 +100,13 @@ class Vouchers
 
 	public function activation()
 	{
+		if (!class_exists('WooCommerce')) {
+			die('Plugin obsługujący vouchery wymaga aktywnego pluginu Woocommerce.');
+		}
+
+		$packageChosenPage = new \Vouchers\Wordpress\Pages\PackageChosenPage();
+		$packageChosenPage->setContent();
+		$packageChosenPage->createPackageChosenPage();
 
 	}
 
